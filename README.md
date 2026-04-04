@@ -9,14 +9,43 @@ This repository contains the solution for the DevOps home assignment. I have imp
 * **Dockerfile**: Optimized multi-stage build for the Java application.
 * **Branch**: All work is done on the `jenkins-pipeline` branch.
 
+Spring PetClinic CI Pipeline
+```bash
+This project implements a full CI/CD pipeline using Jenkins and Docker.
+
+Architecture
+The pipeline consists of the following stages:
+
+Compile: Resolves dependencies from Maven Central and compiles source code.
+
+Test: Runs Unit tests.
+
+Package: Builds a runnable JAR file (skipping tests for speed).
+
+Build Image: Creates a Docker image containing the application.
+
 ## How to Run
 ### 1. Build and Run locally with Docker:
 ```bash
+
+git clone https://github.com/lokokun1/spring-petclinic.git
+cd spring-petclinic
+
 docker build -t spring-petclinic-bar .
 docker run -p 8080:8080 spring-petclinic-bar
 
+Access the app: Open http://localhost:8080 in your browser
 
+---
+hub.docker.com
+https://hub.docker.com/repositories/lokokun290
 
+lokokun290/spring-petclinic-bar:latest
+lokokun290/jenkins:lts
+
+docker run -p 8080:8080 lokokun290/spring-petclinic-bar:latest
+
+---
 # Spring PetClinic Sample Application [![Build Status](https://github.com/spring-projects/spring-petclinic/actions/workflows/maven-build.yml/badge.svg)](https://github.com/spring-projects/spring-petclinic/actions/workflows/maven-build.yml)[![Build Status](https://github.com/spring-projects/spring-petclinic/actions/workflows/gradle-build.yml/badge.svg)](https://github.com/spring-projects/spring-petclinic/actions/workflows/gradle-build.yml)
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/spring-projects/spring-petclinic) [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=7517918)
