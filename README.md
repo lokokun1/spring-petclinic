@@ -5,8 +5,8 @@ Submitted by: Bar
 This repository contains a fully automated CI/CD pipeline for the Spring PetClinic application. The solution automates the process from source code to a publicly available Docker image, ensuring a professional and scalable development workflow.
 
 ```bash
-Pipeline Architecture
-The pipeline is defined in the Jenkinsfile and includes the following automated stages:
+Pipeline Architecture:
+
 Compile: Resolves all dependencies from Maven Central and compiles the source code.
 Test: Runs the unit test suite to ensure application stability.
 Package: Builds a runnable JAR file
@@ -22,7 +22,7 @@ JFrog Artifactory: Integrated as a binary repository for artifact versioning.
 Branch All work is done on the 'jenkins-pipeline' branch.
 
 Spring PetClinic CI Pipeline
-```bash
+
 This project implements a full CI/CD pipeline using Jenkins and Docker.
 
 Architecture
@@ -36,17 +36,13 @@ Package: Builds a runnable JAR file (skipping tests for speed).
 
 Build Image: Creates a Docker image containing the application.
 
-## How to Run
-### 1. Build and Run locally with Docker:
-```bash
+How to Run :
 
-option 1 
-Run the pre-built image from Docker Hub
+option 1 - Run the pre-built image from Docker Hub :
 
 docker run -p 8080:8080 lokokun290/spring-petclinic-bar:latest
 
-option 2 
-Build and Run locally
+option 2 - Build and Run locally :
 
 git clone https://github.com/lokokun1/spring-petclinic.git
 cd spring-petclinic
